@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:food_app/constants.dart';
 import 'package:food_app/widgets/categories.dart';
 import 'package:food_app/widgets/customText.dart';
@@ -112,6 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Icon(
                           Icons.favorite,
                           color: red,
+                          size: 18,
                         ),
                       ),
                       Image.asset(
@@ -146,6 +148,41 @@ class _HomeScreenState extends State<HomeScreen> {
                                 size: 16,
                               ),
                             ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              CustomText(
+                                text: '4.5',
+                                size: 14,
+                                color: grey,
+                              ),
+                              RatingBar(
+                                initialRating: 4.5,
+                                minRating: 1,
+                                direction: Axis.horizontal,
+                                allowHalfRating: true,
+                                itemCount: 5,
+                                itemSize: 14,
+                                itemPadding:
+                                    EdgeInsets.symmetric(horizontal: 2.0),
+                                itemBuilder: (context, _) => Icon(
+                                  Icons.star,
+                                  color: red,
+                                ),
+                                onRatingUpdate: (rating) {
+                                  print(rating);
+                                },
+                              ),
+                            ],
+                          ),
+                          CustomText(
+                            text: '\$12.99',
                           ),
                         ],
                       ),
