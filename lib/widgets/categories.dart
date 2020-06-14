@@ -3,7 +3,14 @@ import 'package:food_app/constants.dart';
 import 'package:food_app/models/category.dart';
 import 'package:food_app/widgets/customText.dart';
 
-List<Category> categoriesList = [Category(image: 'salad.png', name: 'Salad')];
+List<Category> categoriesList = [
+  Category(image: 'salad.png', name: 'Salad'),
+  Category(image: 'steak.png', name: 'Steak'),
+  Category(image: 'sandwich.png', name: 'Fast food'),
+  Category(image: 'ice-cream.png', name: 'Desserts'),
+  Category(image: 'pint.png', name: 'Beer'),
+  Category(image: 'fish.png', name: 'Sea food'),
+];
 
 class Categories extends StatelessWidget {
   @override
@@ -21,11 +28,12 @@ class Categories extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     color: white,
+                    borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
                         color: red[50],
                         offset: Offset(4, 6),
-                        blurRadius: 12,
+                        blurRadius: 20,
                       ),
                     ],
                   ),
@@ -33,7 +41,7 @@ class Categories extends StatelessWidget {
                     padding: const EdgeInsets.all(4.0),
                     child: Image.asset(
                       'assets/images/${categoriesList[index].image}',
-                      width: 50,
+                      width: 60,
                     ),
                   ),
                 ),

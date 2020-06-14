@@ -77,6 +77,83 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             SizedBox(height: 10),
             Categories(),
+            SizedBox(height: 10),
+            CustomText(
+              text: 'Featured',
+              size: 20,
+              color: grey[800],
+            ),
+            SizedBox(height: 5),
+            Container(
+              height: 260,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 2,
+                itemBuilder: (_, index) => Container(
+                  padding: const EdgeInsets.all(16.0),
+                  margin: EdgeInsets.all(8),
+                  height: 240,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: white,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: red[50],
+                        offset: Offset(4, 6),
+                        blurRadius: 4,
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: Icon(
+                          Icons.favorite,
+                          color: red,
+                        ),
+                      ),
+                      Image.asset(
+                        'assets/images/plate1.png',
+                        height: 140,
+                        width: 140,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          CustomText(
+                            text: 'Pad Thai',
+                          ),
+                          Container(
+                            width: 24,
+                            height: 24,
+                            decoration: BoxDecoration(
+                              color: white,
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: red[50],
+                                  offset: Offset(4, 6),
+                                  blurRadius: 4,
+                                ),
+                              ],
+                            ),
+                            child: Center(
+                              child: Icon(
+                                Icons.send,
+                                color: red,
+                                size: 16,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
