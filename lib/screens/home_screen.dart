@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/constants.dart';
+import 'package:food_app/widgets/categories.dart';
+import 'package:food_app/widgets/customText.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -18,11 +20,9 @@ class _HomeScreenState extends State<HomeScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  'What would you like to eat?',
-                  style: TextStyle(
-                    fontSize: 18,
-                  ),
+                CustomText(
+                  text: 'What would you like to eat?',
+                  size: 18,
                 ),
                 Stack(
                   children: [
@@ -75,6 +75,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+            SizedBox(height: 10),
+            Categories(),
           ],
         ),
       ),
