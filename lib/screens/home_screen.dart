@@ -14,6 +14,48 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: white,
+      bottomNavigationBar: Container(
+        margin: EdgeInsets.only(bottom: 25),
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        color: white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'assets/images/home.png',
+                width: 26,
+                height: 26,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'assets/images/target.png',
+                width: 26,
+                height: 26,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'assets/images/shopping-bag.png',
+                width: 26,
+                height: 26,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'assets/images/avatar.png',
+                width: 26,
+                height: 26,
+              ),
+            ),
+          ],
+        ),
+      ),
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.symmetric(horizontal: 12),
